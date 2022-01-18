@@ -20,14 +20,14 @@ public class AsignacionService {
     public AsignacionModel guardarAsignacion(AsignacionModel asignacion){
         return asignacionRepository.save(asignacion);
     }
-
-    public Optional<AsignacionModel> obtenerAsignacionPorId(Long id){
-        return asignacionRepository.findById(id);
-    }
-    public ArrayList<AsignacionModel>  obtenerPor(int id, String columna) {
-        return asignacionRepository. findBy(id, columna);
+    
+    public ArrayList<AsignacionModel>  obtenerPorIdTurista(Long idTurista) {
+        return (ArrayList<AsignacionModel>)asignacionRepository.findByIdTurista(idTurista);
     }
 
+    public ArrayList<AsignacionModel>  obtenerPorIdCiudad(Long idCiudad) {
+        return (ArrayList<AsignacionModel>)asignacionRepository.findByIdCiudad(idCiudad);
+    }
     public boolean eliminarAsignacion(Long id) {
         try{
             asignacionRepository.deleteById(id);
@@ -36,4 +36,5 @@ public class AsignacionService {
             return false;
         }
     }
+
 }

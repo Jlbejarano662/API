@@ -32,11 +32,15 @@ public class AsignacionController {
     }
 
 
-    @GetMapping( path = "/{id}")
-    public Optional<AsignacionModel> obtenerAsignacionPorId(@PathVariable("id") Long id) {
-        return this.asignacionService.obtenerAsignacionPorId(id);
+    @GetMapping( path = "/{idTurista}")
+    public ArrayList<AsignacionModel> obtenerPorIdTurista(@PathVariable("idTurista") Long idTurista) {
+        return this.asignacionService.obtenerPorIdTurista(idTurista);
     }
-
+    @GetMapping( path = "/{idCiudad}")
+    public ArrayList<AsignacionModel> obtenerPorIdCiudad(@PathVariable("idCiudad") Long idCiudad) {
+        return this.asignacionService.obtenerPorIdCiudad(idCiudad);
+    }
+    
     @DeleteMapping( path = "/{id}")
     public String eliminarPorId(@PathVariable("id") Long id){
         boolean ok = this.asignacionService.eliminarAsignacion(id);

@@ -15,8 +15,8 @@ public class AsignacionModel {
     @Column(unique = true, nullable = false)
     private Long id;
 
-    private int idCiudad;
-    private int idTurista;
+    private Long idCiudad;
+    private Long idTurista;
     private double PresupuestoViaje;
     private boolean UsaTarjeta;
     private String Fecha;
@@ -25,11 +25,11 @@ public class AsignacionModel {
         return id;
     }
 
-    public int getIdTurista() {
+    public Long getIdTurista() {
         return idTurista;
     }
 
-    public int getIdCiudad() {
+    public Long getIdCiudad() {
         return idCiudad;
     }
 
@@ -49,11 +49,11 @@ public class AsignacionModel {
         this.id = id;
     }
 
-    public void setIdTurista(int idTurista) {
+    public void setIdTurista(Long idTurista) {
         this.idTurista = idTurista;
     }
 
-    public void setIdCiudad(int idCiudad) {
+    public void setIdCiudad(Long idCiudad) {
         this.idCiudad = idCiudad;
     }
 

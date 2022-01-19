@@ -44,7 +44,7 @@ public class TuristaController {
         if (ok){
             return "Se eliminó el turista con id " + id;
         }else{
-            return "No pudo eliminar el turista con id" + id;
+            return "No pudo eliminar el turista con id " + id;
         }
     }
 }
